@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mohammed Jabir - AWS DevOps Engineer Portfolio. Specializing in Cloud Computing, AI, and DevOps automation.">
+    <title>Mohammed Jabir | AWS DevOps Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&family=Orbitron:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Logos -->
+    <div class="fixed-bg">
+        <i class="fab fa-aws bg-icon icon-1"></i>
+        <i class="fab fa-docker bg-icon icon-2"></i>
+        <i class="fas fa-server bg-icon icon-3"></i> <!-- Server for DevOps -->
+        <i class="fas fa-network-wired bg-icon icon-4"></i> <!-- Network/Pipeline -->
+        <i class="fab fa-linux bg-icon icon-5"></i>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">DevOps<span class="accent">.Port</span></a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1 class="animate-up">Mohammed Jabir</h1>
+            <h2 class="animate-up delay-1">AWS DevOps Engineer | Cloud Enthusiast</h2>
+            <p class="animate-up delay-2">Automating infrastructure, ensuring scalability, and building reliable CI/CD
+                pipelines.</p>
+            <div class="cta-buttons animate-up delay-3">
+                <a href="#contact" class="btn primary">Contact Me</a>
+                <a href="#projects" class="btn secondary">View Projects</a>
+                <a href="#" class="btn outline"><i class="fas fa-download"></i> Bio/Resume</a>
+            </div>
+        </div>
+        <div class="hero-bg-overlay"></div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Highly motivated <strong>BCA student</strong> with a specialization in <strong>AI, Cloud
+                            Computing, and DevOps</strong>.
+                        I have a strong foundation in programming languages like Python, Java, and C++, and hands-on
+                        experience with cloud platforms including
+                        <strong>AWS, Azure, and Google Cloud</strong>.
+                    </p>
+                    <p>
+                        My passion lies in automating workflows and optimizing cloud infrastructure. I possess practical
+                        knowledge of DevOps tools such as
+                        <strong>Jenkins, Docker, and Kubernetes</strong>, and I am constantly learning to stay ahead in
+                        the rapidly evolving cloud landscape.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Cloud -->
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fab fa-aws"></i></div>
+                    <h3>Cloud Computing</h3>
+                    <ul>
+                        <li>AWS (EC2, S3, IAM, VPC, RDS)</li>
+                        <li>Basic knowledge of Azure & GCP</li>
+                        <li>Cloud Security Basics</li>
+                    </ul>
+                </div>
+                <!-- DevOps -->
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-cogs"></i></div>
+                    <h3>DevOps & CI/CD</h3>
+                    <ul>
+                        <li>Jenkins</li>
+                        <li>AWS CodePipeline</li>
+                        <li>CI/CD Automation</li>
+                        <li>Version Control (Git/GitHub)</li>
+                    </ul>
+                </div>
+                <!-- Containers -->
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fab fa-docker"></i></div>
+                    <h3>Containers</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes (Basics)</li>
+                        <li>Container Orchestration</li>
+                    </ul>
+                </div>
+                <!-- Programming/OS -->
+                <div class="skill-card">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <h3>Programming & OS</h3>
+                    <ul>
+                        <li>Python (Basics), Java, C++</li>
+                        <li>Linux & Windows Administration</li>
+                        <li>Shell Scripting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience & Internships</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>CI/CD Pipeline with AWS Native</h3>
+                        <span class="company">TCS iON (Virtual Internship)</span>
+                        <p class="role-desc">Designed and implemented a CI/CD pipeline using AWS native services.</p>
+                        <ul class="job-details">
+                            <li>Integrated <strong>Jenkins</strong> and <strong>Docker</strong> for automated build,
+                                test, and deployment workflows.</li>
+                            <li>Gained hands-on experience in cloud-based DevOps automation.</li>
+                            <li>Managed AWS service integration for seamless deployments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">DevOps Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>AWS Native CI/CD Pipeline</h3>
+                    </div>
+                    <p class="project-desc">Automated deployment pipeline integrating Jenkins, Docker, and AWS services
+                        to streamline software delivery.</p>
+                    <div class="tech-stack">
+                        <span>AWS</span>
+                        <span>Jenkins</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-sm">View Architecture <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Placeholder for future projects -->
+                <div class="project-card placeholder">
+                    <div class="project-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Cloud Infrastructure Setup</h3>
+                    </div>
+                    <p class="project-desc">Provisioning scalable EC2 instances with Load Balancers and Auto Scaling
+                        groups (Upcoming/Practice Project).</p>
+                    <div class="tech-stack">
+                        <span>EC2</span>
+                        <span>VPC</span>
+                        <span>Auto Scaling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="grid-2-col">
+                <!-- Certifications -->
+                <div class="col">
+                    <h2 class="section-title left">Certifications</h2>
+                    <ul class="cert-list">
+                        <li>
+                            <i class="fas fa-certificate accent"></i>
+                            <div>
+                                <h4>AWS Certified Solutions Architect – Associate</h4>
+                                <span class="cert-code">SAA-C03</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-certificate accent"></i>
+                            <div>
+                                <h4>TCS iON AIP 135</h4>
+                                <span class="cert-details">CI/CD Pipeline with AWS Native</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-certificate accent"></i>
+                            <div>
+                                <h4>TCS iON</h4>
+                                <span class="cert-details">Cloud Development</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="col">
+                    <h2 class="section-title left">Education</h2>
+                    <div class="edu-item">
+                        <h4>BCA (AI, Cloud Computing, DevOps)</h4>
+                        <span class="institution">Yenepoya University</span>
+                        <span class="year">2023 - 2026</span>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Higher Secondary</h4>
+                        <span class="institution">GHSS KUNNAKKAVU</span>
+                        <span class="year">2021 - 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:mohammedjabirkp10@gmail.com">mohammedjabirkp10@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/mohammedjabir001"
+                            target="_blank">linkedin.com/in/mohammedjabir001</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bengaluru, Karnataka</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8111814151</span>
+                    </div>
+                </div>
+                <form class="contact-form"
+                    onsubmit="event.preventDefault(); alert('Thank you for reaching out! (Demo Only)');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Mohammed Jabir. Operations & Cloud Reliability.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
