@@ -1,4 +1,4 @@
-name: Deploy Portfolio to AWS EC2
+name: Deploy Portfolio to AWS EC2 using SSM
 
 on:
   push:
@@ -27,18 +27,23 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/jabir-portfolio:latest
 
-      - name: Deploy to EC2
-        uses: appleboy/ssh-action@v1.2.0
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v6
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            docker pull ${{ secrets.DOCKER_USERNAME }}/jabir-portfolio:latest
-            docker stop portfolio || true
-            docker rm portfolio || true
-            docker run -d \
-              --name portfolio \
-              --restart unless-stopped \
-              -p 80:80 \
-              ${{ secrets.DOCKER_USERNAME }}/jabir-portfolio:latest
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy to EC2 using AWS SSM
+        run: |
+          aws ssm send-command \
+            --document-name "AWS-RunShellScript" \
+            --targets "Key=InstanceIds,Values=i-00f47dfac4fb70d6a" \
+            --comment "Deploy latest Docker image" \
+            --parameters commands='[
+              "docker pull '"${{ secrets.DOCKER_USERNAME }}"'/jabir-portfolio:latest",
+              "docker stop portfolio || true",
+              "docker rm portfolio || true",
+              "docker run -d --name portfolio --restart unless-stopped -p 80:80 '"${{ secrets.DOCKER_USERNAME }}"'/jabir-portfolio:latest"
+            ]' \
+            --region us-east-1
